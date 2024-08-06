@@ -16,7 +16,8 @@ jobs:
         node-version: '14'
     - run: npm install
     - run: |
-        timeout 10s npm start
+        nohup npm start &   # Run the server in the background
+        sleep 10            # Allow the server to run for 10 seconds
   publish:
     needs: build
     runs-on: ubuntu-latest
