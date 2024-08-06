@@ -15,9 +15,8 @@ jobs:
       with:
         node-version: '14'
     - run: npm install
-    - run: npm start &
-    - run: sleep 10 && kill $!  # Run the server for 10 seconds and then stop it
-
+    - run: |
+        timeout 10s npm start
   publish:
     needs: build
     runs-on: ubuntu-latest
