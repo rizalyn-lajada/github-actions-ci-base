@@ -6,7 +6,7 @@ const port = 8080;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello I am Rizalyn Lajada, SAIT ID 000905612. I am an IT student. I am in my 3rd semester. Thank you.\n');
+    res.end('Hello I am Rizalyn Lajada, SAIT ID 000905612.\n');
 });
 
 server.listen(port, hostname, () => {
